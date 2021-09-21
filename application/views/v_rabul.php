@@ -25,6 +25,7 @@
                             <th class="border-top-0">#</th>
                             <th class="border-top-0">Nama Unit</th>
                             <th class="border-top-0">Bidang</th>
+                            <th class="border-top-0">Bulan</th>
                             <th class="border-top-0">Publish</th>
                             <th class="border-top-0">Tanggal Publish</th>
                             <!-- <th class="border-top-0">File</th> -->
@@ -39,6 +40,7 @@
                           $id = $memo['id'];
                           $nama_unit = $memo['nama_unit'];
                           $bidang = $memo['bidang'];
+                          $bulan = $memo['bulan'];
                           $publish = $memo['publish'];
                           $tgl_publish = $memo['tgl_publish'];
                           $file_rabul = $memo['file_rabul'];
@@ -47,6 +49,7 @@
                           <th><?=$no++?></th>
                           <th><?php echo $nama_unit;?></th>
                           <th><?php echo $bidang;?></th>
+                          <th><?php echo $bulan;?></th>
                           <th><?php echo $publish;?></th>
                           <th><?php echo $tgl_publish;?></th>
                           <th style="text-align:center;">
@@ -107,6 +110,24 @@
                           <?php foreach($bid->result_array() as $rowww):?>
                           <option value="<?php echo $rowww['bidang'];?>"><?php echo $rowww['bidang'];?></option>
                           <?php endforeach;?>
+												</select>
+										</div>
+                    <div class="form-group">
+											<label>Bulan</label>
+												<select class="form-control" id="bulan" name="bulan" required>
+                          <option></option>
+                          <option value="Januari">Januari</option>
+                          <option value="Februari">Februari</option>
+                          <option value="Maret">Maret</option>
+                          <option value="April">April</option>
+                          <option value="Mei">Mei</option>
+                          <option value="Juni">Juni</option>
+                          <option value="Juli">Juli</option>
+                          <option value="Agustus">Agustus</option>
+                          <option value="September">September</option>
+                          <option value="Oktober">Oktober</option>
+                          <option value="November">November</option>
+                          <option value="Desember">Desember</option>
 												</select>
 										</div>
                     <div class="form-group">

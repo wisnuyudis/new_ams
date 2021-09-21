@@ -33,6 +33,7 @@ class Rabul extends CI_Controller {
 	function tambah_aksi(){
 		$nama_unit = $this->input->post('nama_unit');
 		$bidang = $this->input->post('bidang');
+		$bulan = $this->input->post('bulan');
 		$tgl_publish = date('y-m-d');
 		$publish = $this->session->userdata('nama');
 		//$file_documen = $this->input->post('file_documen');
@@ -57,6 +58,7 @@ class Rabul extends CI_Controller {
 		$data = array(
 			'nama_unit' => $nama_unit,
 			'bidang' => $bidang,
+			'bulan' => $bulan,
 
 			'tgl_publish' => $tgl_publish,
 			'publish' => $publish,
@@ -75,6 +77,7 @@ class Rabul extends CI_Controller {
 		$file_edit_rabul = $this->input->post('file_edit_rabul');
 		$nama_unit = $this->input->post('nama_unit');
 		$bidang = $this->input->post('bidang');
+		$bulan = $this->input->post('bulan');
 
 		$tgl_publish = date('y-m-d');
 		$publish = $this->session->userdata('nama');
@@ -101,6 +104,7 @@ class Rabul extends CI_Controller {
 			'id' => $id,
       'nama_unit' => $nama_unit,
 			'bidang' => $bidang,
+			'bulan' => $bulan,
 			'tgl_publish' => $tgl_publish,
 			'publish' => $publish,
 			'file_rabul' => $file_rabul
